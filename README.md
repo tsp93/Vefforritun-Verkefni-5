@@ -58,6 +58,7 @@ Til að byrja er hægt að afrita þetta repo og bæta við á sínu eigin:
 
 ## Mat
 
+* 10% – Snyrtilegur kóði, engar villur þegar `npm test` er keyrt
 * 30% – Yfirlitssíða með síu
 * 40% – Fyrirlestrarsíða útfærð með efni
 * 10% – Hægt að skrá að fyrirlestur sér kláraður
@@ -88,6 +89,7 @@ Verkefnahluti gildir 60% og lokapróf gildir 40%. Ná verður *bæði* verkefnah
 
 > Útgáfa 0.1
 
-| Útgáfa | Lýsing                                    |
-|--------|-------------------------------------------|
-| 0.1    | Fyrsta útgáfa                             |
+| Útgáfa | Lýsing                            |
+|--------|-----------------------------------|
+| 0.1    | Fyrsta útgáfa                     |
+| 0.2    | Bæta við mati um snyrtilegan kóða |
