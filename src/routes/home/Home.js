@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import { getLectureList } from '../../api';
 
 import Header from '../../components/header/Header';
+import LectureList from '../../components/lectureList/LectureList';
 
 export default class Home extends Component {
 
@@ -13,11 +14,10 @@ export default class Home extends Component {
   render() {
     const { lectures } = this.state;
 
-    console.log(lectures);
-
     return (
       <React.Fragment>
         <Header category="Vefforritun" title="Fyrirlestrar" />
+        <LectureList lectures={lectures}/>>
       </React.Fragment>
     );
   }
