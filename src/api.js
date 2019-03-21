@@ -13,8 +13,17 @@ const LOCALSTORAGE_KEY = 'saved_lectures';
  * Sækir alla vistaða fyrirlestra í localStorage.
  * @returns {array} Fylki af slug fyrir vistaða fyrirlestra.
  */
-function loadSavedLectures() {
-  /* todo */
+export function loadSavedLectures() {
+  // Ná í fyrirlestra
+  let lectures = localStorage.getItem(LOCALSTORAGE_KEY);
+  lectures = JSON.parse(lectures);
+
+  // Setja slugs í fylki
+  let slugs = [];
+  for (let i = 0; i < lectures.length; i += 1) {
+    slugs.push(lectures[i].slug);
+  }
+  return slugs;
 }
 
 /**
@@ -26,18 +35,45 @@ function loadSavedLectures() {
  * @returns {array} Fylki af fyrirlestrum.
  */
 export function getLectureList(filters = []) {
-  /* todo */
+  let { lectures } = data;
+
+  // Sía
+  let filteredLectures = [];
+  for (let i = 0; i < lectures.length; i += 1) {
+    if (lectures[i].finished == null) {
+      lectures[i].finished = false;
+    }
+    if (filters.length === 0 || filters.includes(lectures[i].category)) {
+      filteredLectures.push(lectures[i]);
+    }
+  }
+
+  localStorage.setItem(LOCALSTORAGE_KEY, JSON.stringify(lectures));
+  return filteredLectures;
 }
 
 /**
  * Sækir ákveðinn fyrirlestur eftir slug. Bætir við upplýsingum um hvort
- * fyrirlestur sé kláraður ekki.
+ * fyrirlestur sé kláraður eða ekki.
  *
  * @param {string} slug Slug á fyrirlestri sem sækja á.
  * @returns {object} Fyrirlestri sem fannst eða null ef engin fannst.
  */
 export function getLecture(slug) {
-  /* todo */
+  let { lectures } = data;
+
+  // Ná í fyrirlestur sem svarar til slug
+  let lecture = null;
+  for (let i = 0; i < lectures.length; i +=1) {
+    if (slug === lectures[i].slug) {
+      if (lectures[i].finished == null) {
+        lectures[i].finished = false;
+      }
+      lecture = lectures[i];
+      break;
+    }
+  }
+  return lecture;
 }
 
 /**
@@ -47,5 +83,14 @@ export function getLecture(slug) {
  * @param {string} slug Slug á fyrirlestri sem klára á.
  */
 export function toggleLectureFinish(slug) {
-  /* todo */
+  // Ná í fyrirlestra
+  let lectures = localStorage.getItem(LOCALSTORAGE_KEY);
+  lectures = JSON.parse(lectures);
+
+  // Toggle fyrir slug
+  for (let i = 0; i < lectures.length; i +=1) {
+    if (slug === lectures[i].slug) {
+      lectures[i].finished = !lectures[i].finished;
+    }
+  }
 }

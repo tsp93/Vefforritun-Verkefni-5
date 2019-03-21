@@ -7,7 +7,7 @@ import Header from '../../components/header/Header';
 export default class Home extends Component {
 
   state = {
-    lectures: getLectureList(),
+    lectures: getLectureList([]),
   }
 
   render() {
