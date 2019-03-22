@@ -97,6 +97,10 @@ export function toggleLectureFinish(slug) {
   let lectures = localStorage.getItem(LOCALSTORAGE_KEY);
   lectures = JSON.parse(lectures);
 
+  if (!lectures) {
+    getLectureList([]);
+  }
+
   // Toggle fyrir slug
   for (let i = 0; i < lectures.length; i +=1) {
     if (slug === lectures[i].slug) {

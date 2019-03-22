@@ -1,4 +1,5 @@
 import React from 'react';
+import Helmet from 'react-helmet';
 import Item from '../item/Item';
 
 import './Contents.scss';
@@ -6,10 +7,11 @@ import './Contents.scss';
 export default class Contents extends React.Component {
 
   render() {
-    const { contents } = this.props;
+    const { contents, title } = this.props;
 
     return (
       <main>
+        <Helmet title={title} />
         <div className="lecture__content">
           <div className="lecture__row">
             <div className="lecture__col">

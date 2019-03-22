@@ -12,14 +12,17 @@ export default class Lecture extends Component {
   render() {
     
     const { match } = this.props;
-    let { lecture } = match.params;
+    let { slug } = match.params;
 
-    lecture = getLecture(lecture);
+    const lecture = getLecture(slug);
+    if (!lecture) {
+      return null;
+    }
 
     return (
       <React.Fragment>
         <Header category={lecture.category} title={lecture.title} />
-        <Contents contents={lecture.content} />
+        <Contents contents={lecture.content} title={lecture.title} />
         <Footer finished={lecture.finished} slug={lecture.slug} />
       </React.Fragment>
     );

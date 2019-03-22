@@ -1,0 +1,22 @@
+.filters {
+  display: flex;
+  margin-bottom: 40px;
+  justify-content: center;
+  list-style: none; }
+  .filters__filter {
+    padding: 10px 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+    font-family: "Roboto Mono", "Courier New", monospace;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #ccc;
+    border-radius: 16px;
+    transition: background-color 300ms ease-in-out; }
+    .filters__filter:hover {
+      background-color: #aaa; }
+    .filters__filter--active {
+      background-color: #2d2; }
+      .filters__filter--active:hover {
+        background-color: #1a1; }
