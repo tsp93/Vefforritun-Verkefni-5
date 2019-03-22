@@ -35,7 +35,12 @@ export function loadSavedLectures() {
  * @returns {array} Fylki af fyrirlestrum.
  */
 export function getLectureList(filters = []) {
-  let { lectures } = data;
+  let lectures = localStorage.getItem(LOCALSTORAGE_KEY);
+  lectures = JSON.parse(lectures);
+
+  if (!lectures) {
+    lectures = data.lectures;
+  }
 
   // Sía
   let filteredLectures = [];
@@ -60,7 +65,12 @@ export function getLectureList(filters = []) {
  * @returns {object} Fyrirlestri sem fannst eða null ef engin fannst.
  */
 export function getLecture(slug) {
-  let { lectures } = data;
+  let lectures = localStorage.getItem(LOCALSTORAGE_KEY);
+  lectures = JSON.parse(lectures);
+
+  if (!lectures) {
+    lectures = data.lectures;
+  }
 
   // Ná í fyrirlestur sem svarar til slug
   let lecture = null;

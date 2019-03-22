@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Lecture from '../lecture/Lecture';
+import LectureBox from '../lectureBox/LectureBox';
 
 import './LectureList.scss';
 
@@ -24,7 +24,7 @@ export default class LectureList extends React.Component {
         <div className="list">
           <div className="list__row">
             {lectures.map( lecture => (
-              <Lecture
+              <LectureBox
                 key={lectures.indexOf(lecture)}
                 slug={lecture.slug}
                 thumbnail={lecture.thumbnail}

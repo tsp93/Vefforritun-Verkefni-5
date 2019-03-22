@@ -1,0 +1,54 @@
+.list__col {
+  width: 100%;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-bottom: 40px; }
+  @media (min-width: 800px) {
+    .list__col {
+      width: 33.33333%;
+      padding-right: 10px;
+      padding-left: 10px; } }
+.list__error {
+  width: 100%;
+  padding-right: 10px;
+  padding-left: 10px; }
+
+
+.listItem {
+  display: flex;
+  height: 100%;
+  color: inherit;
+  text-decoration: none;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #ccc;
+  transition: background-color 300ms ease-in-out; }
+  .listItem:hover {
+    background-color: #aaa; }
+  .listItem__image {
+    display: flex;
+    align-items: center; }
+    .listItem__image img {
+      /* stylelint-disable-line */
+      width: 100%; }
+  .listItem__bottom {
+    display: flex;
+    align-items: center;
+    padding: 10px; }
+  .listItem__texts {
+    flex: 1; }
+  .listItem__finished {
+    font-size: 3rem;
+    color: #2d2; }
+  .listItem__category {
+    position: relative;
+    z-index: 1;
+    display: block;
+    font-family: "Roboto Mono", "Courier New", monospace;
+    font-size: 1rem;
+    text-transform: uppercase; }
+  .listItem__title {
+    position: relative;
+    z-index: 1;
+    font-family: "Roboto Mono", "Courier New", monospace;
+    font-size: 2rem; }

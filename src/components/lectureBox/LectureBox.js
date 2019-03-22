@@ -2,13 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom'
 
-import './Lecture.scss';
+import './LectureBox.scss';
 
-function Finished(props) {
-  return <p>Huh</p>;
-}
-
-export default class LectureList extends React.Component {
+export default class LectureBox extends React.Component {
   static propTypes = {
     slug: PropTypes.string,
     thumbnail: PropTypes.string,

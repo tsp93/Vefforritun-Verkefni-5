@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
+import { Route, Switch } from 'react-router-dom';
 
 import Home from './routes/home/Home';
+import Lecture from './routes/lecture/Lecture';
 
 import './App.scss';
+
 
 /*
 todo:
@@ -14,9 +17,12 @@ todo:
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <Home />
-      </div>
+      <section>
+          <Switch>
+            <Route exact path="/" component={Home}/>
+            <Route exact path="/:lecture" component={Lecture} />
+          </Switch>
+        </section>
     );
   }
 }

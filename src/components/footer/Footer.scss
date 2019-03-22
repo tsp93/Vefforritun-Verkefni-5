@@ -1,0 +1,23 @@
+.lecture__footer {
+  display: flex;
+  margin-bottom: 60px;
+  font-family: "Roboto Mono", "Courier New", monospace;
+  color: #000;
+  text-decoration: none;
+  flex-direction: column;
+  align-items: center; }
+
+.lecture__finish {
+  display: inline-block;
+  margin-bottom: 40px;
+  font-family: "Roboto Mono", "Courier New", monospace;
+  font-size: 1rem;
+  background: inherit;
+  border: 0; }
+  .lecture__finish--finished {
+    color: #2d2; }
+
+.lecture__back {
+  font-family: "Roboto Mono", "Courier New", monospace;
+  color: #000;
+  text-decoration: none; }

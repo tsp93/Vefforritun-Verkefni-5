@@ -1,0 +1,36 @@
+.item {
+  margin-bottom: 40px; }
+  .item__text {
+    margin-bottom: 20px;
+    font-size: 1rem;
+    line-height: 1.8; }
+  .item__heading {
+    margin-bottom: -20px;
+    font-family: "Roboto Mono", "Courier New", monospace;
+    font-size: 2rem; }
+  .item--blockquote {
+    padding: 20px;
+    margin-right: -20px;
+    margin-left: -20px;
+    background-color: #ccc; }
+  .item__code {
+    font-family: "Roboto Mono", "Courier New", monospace; }
+  .item__quote {
+    margin-bottom: 20px; }
+  .item__attribute {
+    font-style: italic; }
+  .item__caption {
+    font-style: italic; }
+  .item__li {
+    margin-bottom: 20px; }
+  .item--youtube .item__content {
+    position: relative;
+    max-width: 100%;
+    padding-bottom: 56.25%;
+    overflow: hidden; }
+  .item--youtube .item__iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
