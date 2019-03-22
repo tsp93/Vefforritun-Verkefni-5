@@ -23,8 +23,8 @@ export default class Home extends Component {
     return (
       <React.Fragment>
         <Header category="Vefforritun" title="Fyrirlestrar" />
-        <Filters changeFilter={this.handleFilter}/>>
-        <LectureList lectures={lectures}/>>
+        <Filters changeFilter={this.handleFilter} />
+        <LectureList lectures={lectures} />>
       </React.Fragment>
     );
   }

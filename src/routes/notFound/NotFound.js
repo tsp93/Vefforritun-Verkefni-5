@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-import Helmet from 'react-helmet';
+
+import Error from '../../components/error/Error';
 
 export default class NotFound extends Component {
 
   render() {
     return (
-      <div>
-        <Helmet title="Síða fannst ekki" />
-        <p>Síða fannst ekki</p>
-      </div>
+      <React.Fragment>
+        <Error />
+      </React.Fragment>
     );
   }
 }
