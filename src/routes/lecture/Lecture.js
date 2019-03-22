@@ -23,7 +23,7 @@ export default class Lecture extends Component {
 
     return (
       <React.Fragment>
-        <Header category={lecture.category} title={lecture.title} />
+        <Header category={lecture.category} title={lecture.title} background={lecture.image} />
         <Contents contents={lecture.content} title={lecture.title} />
         <Footer finished={lecture.finished} slug={lecture.slug} />
       </React.Fragment>
