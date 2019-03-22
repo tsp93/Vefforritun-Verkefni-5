@@ -19,8 +19,8 @@ export default class Lecture extends Component {
     return (
       <React.Fragment>
         <Header category={lecture.category} title={lecture.title} />
-        <Contents contents={lecture.content}/>
-        <Footer finished={lecture.finished}/>
+        <Contents contents={lecture.content} />
+        <Footer finished={lecture.finished} slug={lecture.slug} />
       </React.Fragment>
     );
   }

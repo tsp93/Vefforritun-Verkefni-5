@@ -10,10 +10,11 @@ export default class LectureBox extends React.Component {
     thumbnail: PropTypes.string,
     category: PropTypes.string,
     title: PropTypes.string,
+    finished: PropTypes.bool,
   }
 
   render() {
-    const { slug, thumbnail, category, title } = this.props;
+    const { slug, thumbnail, category, title, finished } = this.props;
 
     return (
       <div className="list__col">
@@ -24,6 +25,7 @@ export default class LectureBox extends React.Component {
           <div className="listItem__bottom">
               <span className="listItem__category">{category}</span>
               <h2 className="listItem__title">{title}</h2>
+              {finished ? <div className="listItem__finished">✓</div>: ""}
           </div>
         </Link>
       </div>

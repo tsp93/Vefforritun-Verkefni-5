@@ -30,6 +30,7 @@ export default class LectureList extends React.Component {
                 thumbnail={lecture.thumbnail}
                 category={lecture.category}
                 title={lecture.title}
+                finished={lecture.finished}
               />
             ))}
           </div>

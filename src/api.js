@@ -103,4 +103,6 @@ export function toggleLectureFinish(slug) {
       lectures[i].finished = !lectures[i].finished;
     }
   }
+
+  localStorage.setItem(LOCALSTORAGE_KEY, JSON.stringify(lectures));
 }
